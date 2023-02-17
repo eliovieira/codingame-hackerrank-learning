@@ -6,7 +6,7 @@
 // letter === character
 // starting caps at letter 0
 
-// "hello" => "HeLlO"
+// "hello" => "HeLlO" 
 // "yo eli" => "Yo eLi"
 // "hello???" => "HeLlO???"
 
