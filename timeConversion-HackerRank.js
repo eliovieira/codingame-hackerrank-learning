@@ -1,4 +1,4 @@
-//Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+// Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 
 function timeConversion(s) {
   const hour = s.slice(0,2);
