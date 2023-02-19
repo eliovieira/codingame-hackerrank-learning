@@ -11,7 +11,7 @@ class NotesStore {
       state !== "active" &&
       state !== "others"
     ) {
-      throw new Error(`Error: Invalid state " + ${state}`);
+      throw new Error(`Invalid state ${state}`);
     } else {
       this.notes.push({ name: name, state: state });
     }
@@ -20,7 +20,7 @@ class NotesStore {
   getNotes(state) {
     const arr = [];
     if (state !== "completed" && state !== "active" && state !== "others") {
-      throw new Error(`Error: Invalid state " + ${state}`);
+      throw new Error(`Invalid state ${state}`);
     } else {
       for (let i = 0; i < this.notes.length; i++) {
         if (this.notes[i].state === state) {
