@@ -12,22 +12,24 @@ The third line contains , the number of letters to rotate the alphabet by.
 function caesarCipher(s, k) {
     
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  
-    //create new Alphabet based on the K ( number of letters to rotate the alphabet by )
-    const alphabetRotated = alphabet.slice(k)+alphabet.slice(0,k);
+    
+    while(k>alphabet.length){
+        k=k-alphabet.length
+    }
+ 
+    const alphabetRotated = alphabet.slice(k)+alphabet.slice(0,k);   
+ 
     let finalOutput ="";
+  
 
     for(let i=0;i<s.length;i++){
         const letter = s[i];
         
-        // check if the letter is a symbol, 
-        // if it's not a symbol, get the index of the letter in the alphabet
-        // if it's a symbol, print the letter
+        // check if it's a symbol
         if (alphabet.includes(letter.toLowerCase())){
             const indexLetter = alphabet.indexOf(letter.toLowerCase());
             console.log(alphabetRotated[indexLetter]);
-          
-            // check if the letter is uppercase
+            // check if the letter is UpperCase
             if (letter.toUpperCase() === letter){
                 finalOutput += alphabetRotated[indexLetter].toUpperCase();
             }else{
@@ -38,5 +40,6 @@ function caesarCipher(s, k) {
             finalOutput+=s[i];
         } 
     }
+
     return finalOutput;
 }
