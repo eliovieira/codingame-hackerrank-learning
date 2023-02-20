@@ -27,5 +27,5 @@ async function getCountryName(str) {
   }
   getData(1);
 }
-
+ 
 console.log(getCountryName("PT"));
